@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Weather Forecast</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/chart-js/Chart.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Weather Forecast</h1>
+    </header>
+
+    <div id="main">
+        <form action="">
+            <label for="wf-city">City:</label><input type="text" name="city" id="wf-city" required />
+            <label for="wf-days">Days:</label> 1<input type="range" min="1" max="5" name="days" id="wf-days" />5
+            <input type="checkbox" name="night" id="wf-night" /><label for="wf-night">Night temperatures</label>
+            <h4>Temperature unit</h4>
+            <input type="radio" name="temperature" id="wf-temp1" checked /><label for="wf-temp1">Celsius</label>
+            <input type="radio" name="temperature" id="wf-temp2" /><label for="wf-temp2">Fahrenheit</label>
+            <input type="button" name="show" id="show" value="Show forecast" />
+        </form>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
