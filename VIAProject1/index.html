@@ -13,14 +13,26 @@
 
     <div id="main">
         <form action="">
-            <label for="wf-city">City:</label><input type="text" name="city" id="wf-city" required />
-            <label for="wf-days">Days:</label> 1<input type="range" min="1" max="5" name="days" id="wf-days" />5
-            <input type="checkbox" name="night" id="wf-night" /><label for="wf-night">Night temperatures</label>
-            <h4>Temperature unit</h4>
-            <input type="radio" name="temperature" id="wf-temp1" checked /><label for="wf-temp1">Celsius</label>
-            <input type="radio" name="temperature" id="wf-temp2" /><label for="wf-temp2">Fahrenheit</label>
-            <input type="button" name="show" id="show" value="Show forecast" />
+            <div class="city">
+                <label for="wf-city">City:</label>
+                <input type="text" name="city" id="wf-city" required />
+            </div>
+            <div class="days">
+                <label for="wf-days">Days:</label>
+                1<input type="range" min="1" max="5" name="days" id="wf-days" />5
+            </div>
+            <div class="night">
+                <input type="checkbox" name="night" id="wf-night" />
+                <label for="wf-night">Night temperatures</label>
+            </div>
+            <div class="temperature">
+                <h4>Temperature unit</h4>
+                <input type="radio" name="temperature" id="wf-temp1" checked /><label for="wf-temp1">Celsius</label>
+                <input type="radio" name="temperature" id="wf-temp2" /><label for="wf-temp2">Fahrenheit</label>
+            </div>
+            <input type="submit" name="show" id="show" value="Show forecast" />
         </form>
+        <canvas id="chart" width="900" height="500"></canvas>
     </div>
 
     <script src="js/app.js"></script>
