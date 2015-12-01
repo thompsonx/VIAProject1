@@ -57,6 +57,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\style.css">
+      <DependentUpon>style.less</DependentUpon>
+    </Content>
+    <Content Include="css\style.less" />
+    <Content Include="css\style.css.map">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -65,6 +72,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
     <Content Include="index.html" />
     <Content Include="js\app.js" />
     <Content Include="js\chart-js\Chart.min.js" />

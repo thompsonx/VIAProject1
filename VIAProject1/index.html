@@ -3,36 +3,46 @@
 <head>
     <title>Weather Forecast</title>
 
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/chart-js/Chart.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Gudea:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <header>
-        <h1>Weather Forecast</h1>
-    </header>
+    <div id="wrapper">
+        <header>
+            <h1>Weather Forecast</h1>
+        </header>
 
-    <div id="main">
-        <form action="">
-            <div class="city">
-                <label for="wf-city">City:</label>
-                <input type="text" name="city" id="wf-city" required />
+        <div id="main">
+            <form action="">
+                <div class="entry city">
+                    <label for="wf-city">City:</label>
+                    <input type="text" name="city" id="wf-city" required />
+                </div>
+                <div class="entry days">
+                    <label for="wf-days">Days:</label>
+                    1<input type="range" min="1" max="5" name="days" id="wf-days" />5
+                </div>
+                <div class="entry night">
+                    <input type="checkbox" name="night" id="wf-night" />
+                    <label for="wf-night">Night temperatures</label>
+                </div>
+                <div class="entry temperature">
+                    <h4>Temperature unit</h4>
+                    <div class="radio">
+                        <input type="radio" name="temperature" id="wf-temp1" checked /><label for="wf-temp1">Celsius</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="temperature" id="wf-temp2" /><label for="wf-temp2">Fahrenheit</label>
+                    </div>
+                </div>
+                <input type="submit" name="show" id="show" value="Show forecast" />
+            </form>
+            <div class="empty-graph">
+                <h2>Enter your city and click on "Show forecast". A graph will be displayed here.</h2>
             </div>
-            <div class="days">
-                <label for="wf-days">Days:</label>
-                1<input type="range" min="1" max="5" name="days" id="wf-days" />5
-            </div>
-            <div class="night">
-                <input type="checkbox" name="night" id="wf-night" />
-                <label for="wf-night">Night temperatures</label>
-            </div>
-            <div class="temperature">
-                <h4>Temperature unit</h4>
-                <input type="radio" name="temperature" id="wf-temp1" checked /><label for="wf-temp1">Celsius</label>
-                <input type="radio" name="temperature" id="wf-temp2" /><label for="wf-temp2">Fahrenheit</label>
-            </div>
-            <input type="submit" name="show" id="show" value="Show forecast" />
-        </form>
-        <canvas id="chart" width="900" height="500"></canvas>
+        </div>
     </div>
 
     <script src="js/app.js"></script>
